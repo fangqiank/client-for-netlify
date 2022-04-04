@@ -31,7 +31,9 @@ export const NotesList = () => {
 	const [body, setBody] = useState('')
 	const [modalIsOpen, setModalIsOpen] = useState(false)
 
-	isLoading && <Spinner />
+	if(isLoading) {
+		return <Spinner />
+	}
 
 	const initiallizeForm = () => {
 		noteId = 0

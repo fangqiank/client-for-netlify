@@ -10,19 +10,19 @@ import { Header } from './components/Header'
 function App() {
   return (
     <>
-        <Header />
-        <Router>
-          <NoteProvider>
-            <div className="container dark">
-              <div className='app'>
-                <Routes>
-                  <Route path='/' element={<NotesList />} />
-                  <Route path='/notes/:id' element={<NoteDetail/>}/>
-                </Routes>
-              </div>
+      <Header />
+      <Router>
+        <NoteProvider>
+          <div className="container dark">
+            <div className='app'>
+              <Routes>
+                <Route path='/' element={<NotesList />} />
+                <Route path='/notes/:id' element={<NoteDetail/>}/>
+              </Routes>
             </div>
-          </NoteProvider>
-        </Router>
+          </div>
+        </NoteProvider>
+      </Router>
       <ToastContainer/>
     </>
   );

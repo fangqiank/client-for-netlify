@@ -111,7 +111,7 @@ export const NotesList = () => {
 			style={customStyles}
 			contentLabel='Add note'
 		>
-			<h2>Add Note</h2>
+			<h2>{noteId === 0 ? 'Add Note' : 'Edit Note'}</h2>
 			<button className='btn-close' onClick={closeModal}>X</button>
 
 			<form onSubmit={handleSubmit}>

@@ -9,6 +9,7 @@ export const NoteProvider = ({children}) => {
 	const [notes, setNotes] = useState([])
 
 	const fetchNotes = () => {
+		setIsLoading(true)
 		createAPIEndpoint(ENDPOINTS.NOTES)
 		.fetch()
 		.then(res =>{
@@ -24,6 +25,7 @@ export const NoteProvider = ({children}) => {
 	}
 
 	const addNote = newNote => {
+		setIsLoading(true)
 		createAPIEndpoint(ENDPOINTS.NOTES)
 		.create(newNote)
 		.then(res => {
@@ -40,6 +42,7 @@ export const NoteProvider = ({children}) => {
 	}
 
 	const updateNote = (id, updNote) => {
+		setIsLoading(true)
 		createAPIEndpoint(ENDPOINTS.NOTES)
 		.update(id, updNote)
 		.then(res => {
